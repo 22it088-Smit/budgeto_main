@@ -1,0 +1,51 @@
+name: budgeto
+description: A comprehensive money management app to help users take control of their finances.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.5
+  provider: ^6.0.5
+  shared_preferences: ^2.2.0
+  intl: ^0.18.1
+  fl_chart: ^0.63.0
+  flutter_slidable: ^3.0.0
+  email_validator: ^2.1.17
+  flutter_local_notifications: ^15.1.0+1
+  timezone: ^0.9.2
+  google_fonts: ^5.1.0
+  flutter_svg: ^2.0.7
+  uuid: ^3.0.7
+  shimmer: ^3.0.0
+  cached_network_image: ^3.2.3
+  flutter_native_splash: ^2.3.1
+  flutter_launcher_icons: ^0.13.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+
+flutter_native_splash:
+  color: "#ffffff"
+  color_dark: "#121212"
+  image: assets/images/splash_logo.png
+  android: true
+  ios: true
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon.png"
+  min_sdk_android: 21
