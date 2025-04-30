@@ -23,12 +23,12 @@ A comprehensive money management app designed to help users take control of thei
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/budgeto.git
+git clone https://github.com/22it088-Smit/budgeto_main.git
 ```
 
 2. Navigate to the project directory
 ```bash
-cd budgeto
+cd budgeto_main
 ```
 
 3. Install dependencies
