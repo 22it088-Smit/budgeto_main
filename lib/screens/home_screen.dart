@@ -21,7 +21,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final currencyFormat = NumberFormat.currency(locale: 'en_US', symbol: '\$');
+  final currencyFormat = NumberFormat.currency(locale: 'en_IN', symbol: '₹');
   bool _isLoading = true;
   String? _error;
 
@@ -266,6 +266,23 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
+        onTap: (index) {
+          switch (index) {
+            case 0:
+              // Already on home screen
+              break;
+            case 1:
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const PlanningScreen()),
+              );
+              break;
+            case 2:
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const SettingsScreen()),
+              );
+              break;
+          }
+        },
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),

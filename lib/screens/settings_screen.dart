@@ -32,7 +32,7 @@ class SettingsScreen extends StatelessWidget {
                     radius: 40,
                     backgroundColor: Theme.of(context).primaryColor,
                     child: Text(
-                      authService.user?.displayName?.substring(0, 1).toUpperCase() ?? 'U',
+                      authService.displayName?.substring(0, 1).toUpperCase() ?? 'U',
                       style: const TextStyle(
                         fontSize: 32,
                         color: Colors.white,
@@ -41,13 +41,13 @@ class SettingsScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Text(
-                    authService.user?.displayName ?? 'User',
+                    authService.displayName ?? 'User',
                     style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   Text(
-                    authService.user?.email ?? '',
+                    authService.email ?? '',
                     style: TextStyle(
                       color: Colors.grey[600],
                     ),
@@ -80,7 +80,7 @@ class SettingsScreen extends StatelessWidget {
                 ListTile(
                   title: const Text('Budget Split'),
                   subtitle: Text(
-                    'Need: ${budgetService.budget?.needPercentage}%, Expenses: ${budgetService.budget?.expensesPercentage}%, Savings: ${budgetService.budget?.savingsPercentage}%',
+                    'Need: ${budgetService.budget?.needPercentage ?? 50}%, Expenses: ${budgetService.budget?.expensesPercentage ?? 30}%, Savings: ${budgetService.budget?.savingsPercentage ?? 20}%',
                   ),
                   trailing: const Icon(Icons.chevron_right),
                   onTap: () {
@@ -261,8 +261,20 @@ class SettingsScreen extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 24),
+          
+          // Logout button
+          CustomButton(
+            text: 'Logout',
+            onPressed: () async {
+              await authService.logout();
+              if (context.mounted) {
+                Navigator.of(context).pushReplacementNamed('/login');
+              }
+            },
+          ),
         ],
       ),
-    ),
-  },
+    );
+  }
 }    

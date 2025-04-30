@@ -67,7 +67,7 @@ class _AddIncomeDialogState extends State<AddIncomeDialog> {
               controller: _amountController,
               decoration: const InputDecoration(
                 labelText: 'Amount',
-                prefixText: '\$',
+                prefixText: '₹',
               ),
               keyboardType: TextInputType.number,
               validator: (value) {

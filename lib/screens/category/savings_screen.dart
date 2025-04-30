@@ -15,7 +15,7 @@ class SavingsScreen extends StatefulWidget {
 
 class _SavingsScreenState extends State<SavingsScreen> with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  final currencyFormat = NumberFormat.currency(locale: 'en_US', symbol: '\$');
+  final currencyFormat = NumberFormat.currency(locale: 'en_IN', symbol: '₹');
   String _selectedRiskLevel = 'All';
 
   @override
@@ -254,7 +254,7 @@ class _SavingsScreenState extends State<SavingsScreen> with SingleTickerProvider
                           TextField(
                             decoration: const InputDecoration(
                               labelText: 'Amount to Invest',
-                              prefixText: '\$',
+                              prefixText: '₹',
                             ),
                             keyboardType: TextInputType.number,
                           ),
@@ -297,7 +297,7 @@ class _SavingsScreenState extends State<SavingsScreen> with SingleTickerProvider
                       const TextField(
                         decoration: InputDecoration(
                           labelText: 'Investment Amount',
-                          prefixText: '\$',
+                          prefixText: '₹',
                         ),
                         keyboardType: TextInputType.number,
                       ),

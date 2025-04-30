@@ -16,7 +16,7 @@ class NeedScreen extends StatefulWidget {
 
 class _NeedScreenState extends State<NeedScreen> with SingleTickerProviderStateMixin {
   late TabController _tabController;
-  final currencyFormat = NumberFormat.currency(locale: 'en_US', symbol: '\$');
+  final currencyFormat = NumberFormat.currency(locale: 'en_IN', symbol: '₹');
 
   @override
   void initState() {

@@ -14,7 +14,7 @@ class StockList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currencyFormat = NumberFormat.currency(locale: 'en_US', symbol: '\$');
+    final currencyFormat = NumberFormat.currency(locale: 'en_IN', symbol: '₹');
 
     return ListView.builder(
       shrinkWrap: true,

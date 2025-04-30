@@ -12,7 +12,7 @@ class PlanningScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final budgetService = Provider.of<BudgetService>(context);
-    final currencyFormat = NumberFormat.currency(locale: 'en_US', symbol: '\$');
+    final currencyFormat = NumberFormat.currency(locale: 'en_IN', symbol: '₹');
     
     // Get emergency fund plan
     final emergencyFundPlan = budgetService.plans

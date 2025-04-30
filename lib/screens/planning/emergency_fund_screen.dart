@@ -15,7 +15,7 @@ class _EmergencyFundScreenState extends State<EmergencyFundScreen> {
   final _formKey = GlobalKey<FormState>();
   final _targetAmountController = TextEditingController();
   final _monthlyAmountController = TextEditingController();
-  final currencyFormat = NumberFormat.currency(locale: 'en_US', symbol: '\$');
+  final currencyFormat = NumberFormat.currency(locale: 'en_IN', symbol: '₹');
   
   @override
   void initState() {
@@ -218,7 +218,7 @@ class _EmergencyFundScreenState extends State<EmergencyFundScreen> {
                       controller: _targetAmountController,
                       decoration: const InputDecoration(
                         labelText: 'Target Amount',
-                        prefixText: '\$',
+                        prefixText: '₹',
                       ),
                       keyboardType: TextInputType.number,
                       validator: (value) {
@@ -239,7 +239,7 @@ class _EmergencyFundScreenState extends State<EmergencyFundScreen> {
                       controller: _monthlyAmountController,
                       decoration: const InputDecoration(
                         labelText: 'Monthly Contribution',
-                        prefixText: '\$',
+                        prefixText: '₹',
                       ),
                       keyboardType: TextInputType.number,
                       validator: (value) {
